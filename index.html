@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+        <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+        </label>
         <header>
-        <h1>Artem's Blog: Thoughts about technology and my path</h1>
+        <h1>Artem's Blog: Thoughts about things and my path</h1>
         </header>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
-        <header>
         <h1>Chapter I: Waking Up in a field of Technology</h1>
-        </header>
         <section>
         <article>
 
@@ -46,7 +47,8 @@
         <p><strong>Published on September 20, 2023</strong></p>
 
         </article>
-
+        </section>
+        <section>
         <article>
 
         <header>
@@ -62,7 +64,7 @@
         <p> The field of IT is vast and multifaceted, encompassing a wide range of roles, from software development and
             cybersecurity to network administration and data analysis. While it’s true that some positions may require less
             mathematical prowess than others, it’s essential to acknowledge that math and degree programs provide a strong
-            foundation for many aspects of the IT industry.<p>
+            foundation for many aspects of the IT industry.</p>
 
         <p> Mathematics is the art of problem-solving, a skill highly sought after in IT. Whether you're troubleshooting a
             network issue, debugging code, or analyzing data trends, the ability to approach problems methodically is
@@ -107,7 +109,8 @@
         <p><strong>Published on September 27, 2023</strong></p>
 
         </article>
-
+        </section>
+        <section>
         <article>
 
         <header>
@@ -179,12 +182,13 @@
             <p><strong>Published on October 04, 2023</strong></p>
 
         </article>
-
+        </section>
+        <section>
         <article>
 
         <header>
         <h3>Romanticization of Robots and AI: The Allure and the Caution</h3>
-        <header>
+        </header>
 
         <p> In literature, film, and popular culture, there is a rich history of romanticizing various facets of our society, be
             it war, the mafia, or even the Wild West. This allure of embellishing reality is neither new nor uncommon. But as we
@@ -266,7 +270,9 @@
                 present, I’m more determined than ever to continue doing what must be done in becoming the professional.</p>
 
             <p><strong>Published on November 11, 2024</strong></p>
-
+            </article>
+            </section>
+            <section>
             <article>
             <header>
             <h3>Nietzsche, AI, and Robotics</h3>
@@ -327,16 +333,13 @@
             </article>
         </section>
         <script>
-    const toggleButton = document.getElementById('darkModeToggle');
-    
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-    });
-    
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.body.classList.add('dark-mode');
-    }
+        document.getElementById('darkModeToggle').addEventListener('change', function () {
+        if (this.checked) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+        });
     </script>
 </body>
 </html>

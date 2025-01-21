@@ -11,7 +11,8 @@
         <header>
         <h1>Artem's Blog: Thoughts about technology and my path</h1>
         </header>
-        <heaedr>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+        <header>
         <h1>Chapter I: Waking Up in a field of Technology</h1>
         </header>
         <section>
@@ -267,9 +268,9 @@
             <p><strong>Published on November 11, 2024</strong></p>
 
             <article>
-                <header>
-                    <h3>Nietzsche, AI, and Robotics</h3>
-                </header>
+            <header>
+            <h3>Nietzsche, AI, and Robotics</h3>
+            </header>
             
             <p> In the realm of philosophy, few thinkers have been as provocative and enduring as Friedrich Nietzsche. His ideas,
                 suffused with a profound skepticism of established norms and a celebration of individual creativity, resonate
@@ -325,5 +326,17 @@
                 <p><strong>Published on January 20, 2025</strong></p>
             </article>
         </section>
+        <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+    
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+    </script>
 </body>
 </html>

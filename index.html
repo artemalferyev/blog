@@ -15,6 +15,8 @@
         <header>
         <h1>Artem's Blog: Thoughts about Things and my Path</h1>
         </header>
+        <button id="toggleTocBtn">☰</button>
+        <nav id="toc" class="hidden"></nav>
         <h1>Chapter I: Waking Up in the Field of Technology</h1>
         <section>
         <article>
@@ -241,12 +243,12 @@
 
         </article>
         </section>
-        <section>
+        <h1>Chapter II: Becoming the Professional</h1>
+            <section>
+            <article>
             <header>
-            <h1>Chapter II: Becoming the Professional</h1>
-            </header>
             <h3>Living and Coding After Brain Surgery: My Journey with Cavernoma</h3>
-            
+            </header>
             <p> One year ago, on October 14, 2023, my life took a sudden turn. Out of nowhere, I lost my sense of balance and began
                 experiencing double vision. Simple movements felt off as I couldn’t walk in a straight line. After a series of
                 medical tests, doctors discovered that I had something unexpected in my brain — a cavernoma. Located in my brainstem,
@@ -330,9 +332,69 @@
                 that this interplay between creator and creation is not a limitation, but the essence of what it means to be human.</p>
             
                 <p><strong>Published on January 20, 2025</strong></p>
+                </article>
+                </section>
+                <section>           
+                <article>
+                <header>
+                    <h3>Nietzsche, AI, and Robotics: Part II</h3>
+                    </header>
+                    
+                    <p> Building on earlier ideas, we delve deeper into how artificial intelligence and robotics embody the tensions and
+                        aspirations of the human spirit. The questions raised by their existence are not only technical but existential,
+                        touching on creativity, power, and transformation in ways that resonate with the challenges of self-overcoming.</p>
+                    
+                    <h4>The Creator and the Created</h4>
+                    
+                    <p> The relationship between humanity and its creations mirrors the dynamic between artists and their art. In building
+                        machines capable of learning, evolving, and even creating, we engage in a profound act of self-expression—one that
+                        reflects our drive to transcend our own limitations. Yet, this act of creation also invites us to confront the
+                        fragile boundaries between the maker and the made. As machines take on qualities once deemed uniquely human, they
+                        force us to reimagine what it means to create and to be.</p>
+                    
+                    <p> Such reflections are not without their risks. To create something truly new, we must be willing to disrupt our
+                        current values and assumptions. The act of programming intelligence into a machine is not merely technical; it is a
+                        philosophical statement, an extension of our willingness to explore the unknown and to accept the consequences of
+                        our own audacity.</p>
+                    
+                    <h4>Embracing Disruption</h4>
+                    
+                    <p> Creation and destruction are two sides of the same coin. The advent of intelligent machines disrupts long-held
+                        norms, from the nature of work to the boundaries of creativity. For some, this disruption is a source of fear—a sign
+                        that the familiar world is slipping away. But to resist change is to deny the very force that drives human progress.
+                    </p>
+                    
+                    <p> Progress is not comfortable; it is not orderly. It demands that we break with the past and embrace the uncertainty
+                        of what lies ahead. The upheavals brought by AI and robotics are not signs of failure but of transformation—a
+                        reminder that growth is only possible through courage and confrontation with the unknown.</p>
+                    
+                    <h4>The Abyss</h4>
+                    
+                    <p> The machines we create reflect both our greatest aspirations and our deepest anxieties. They force us to gaze into
+                        an abyss of questions: What defines humanity? What responsibilities come with creation? And what happens when the
+                        tools we build reshape the world in ways we cannot fully control?</p>
+                    
+                    <p> The abyss is not something to be feared. It is a space of potential, a confrontation with the truths we might
+                        otherwise avoid. In staring into it, we find the strength to question, to create, and to embrace the uncertainties
+                        of our existence. It is not answers that define us, but the courage to continue asking the most difficult questions.
+                    </p>
+                    
+                    <h4>Art, Will, and the Courage to Create</h4>
+                    
+                    <p> The ideas explored here are not an attempt to rigidly interpret the Nietzschean philosophy. In truth, anything labeled with certainty as part of this—becomes something other than itself. What remains, however, is the spirit of courage: the willingness to
+                        create in the face of uncertainty, to challenge ourselves in ways that transcend comfort, and to accept that our
+                        creations are both reflections of who we are and stepping stones toward who we might become.</p>
+                    
+                    <p> In the end, what matters is not the machines or even the philosophies we attach to them. It is the act of creating,
+                        the boldness to confront the unknown, and the endless striving to make meaning out of chaos. In this context, only
+                        art, the abyss, and the will to be courageous truly endure.</p>
+                    
+                    <p><strong>Published on January 24, 2025</strong></p>
             </article>
         </section>
+        <footer>
         <script>
+            // Dark Mode Toggle
         document.getElementById('darkModeToggle').addEventListener('change', function () {
         if (this.checked) {
             document.body.classList.add('dark-mode');
@@ -340,6 +402,36 @@
             document.body.classList.remove('dark-mode');
         }
         });
+        // Table of Contents
+            const tocContainer = document.getElementById('toc');
+                const toggleTocBtn = document.getElementById('toggleTocBtn');
+
+                const tocHeading = document.createElement('h2');
+                tocContainer.appendChild(tocHeading);
+
+                const tocList = document.createElement('ul');
+
+                const headings = document.querySelectorAll('h3');
+                headings.forEach((heading, index) => {
+                    if (!heading.id) {
+                        heading.id = `heading-${index}`;
+                    }
+
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = `#${heading.id}`;
+                    link.textContent = heading.textContent;
+
+                    listItem.appendChild(link);
+                    tocList.appendChild(listItem);
+                });
+
+                tocContainer.appendChild(tocList);
+
+                toggleTocBtn.addEventListener('click', () => {
+                    tocContainer.classList.toggle('visible');
+                });
     </script>
+    </footer>
 </body>
 </html>

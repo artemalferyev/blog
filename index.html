@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-        <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider"></span>
-        </label>
-        <header>
+<label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+    </span>
+</label>
+    <header>
         <h1>Artem's Blog: Thoughts about Things and my Path</h1>
-        </header>
-        <button id="toggleTocBtn">☰</button>
-        <nav id="toc" class="hidden"></nav>
-        <h1>Chapter I: Waking Up in the Field of Technology</h1>
-        <section>
+    </header>
+    <button id="toggleTocBtn">☰</button>
+    <nav id="toc" class="hidden"></nav>
+    <h1>Chapter I: Waking Up in the Field of Technology</h1>
+    <section>
         <article>
-
         <header>
         <h3>R.U.R.</h3>
         </header>
-
         <p> In 1920, Karel Čapek's brother, Josef Čapek, who was an accomplished artist, asked him to write a play to
             accompany his artwork for an upcoming exhibition. The play that Karel Čapek wrote was titled "R.U.R."
             (Rossum's Universal Robots), and it premiered in 1921. This play is notable not only for its dramatic impact
@@ -395,15 +396,15 @@
         <footer>
         <script>
             // Dark Mode Toggle
-        document.getElementById('darkModeToggle').addEventListener('change', function () {
+    document.getElementById('darkModeToggle').addEventListener('change', function () {
         if (this.checked) {
             document.body.classList.add('dark-mode');
         } else {
             document.body.classList.remove('dark-mode');
         }
-        });
+    });
         // Table of Contents
-            const tocContainer = document.getElementById('toc');
+                const tocContainer = document.getElementById('toc');
                 const toggleTocBtn = document.getElementById('toggleTocBtn');
 
                 const tocHeading = document.createElement('h2');

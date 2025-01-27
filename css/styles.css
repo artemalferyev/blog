@@ -160,49 +160,40 @@ input:checked+.slider {
 input:checked+.slider:before {
     transform: translateX(26px);
 }
-/* Modern TOC container with transparency */
+
 #toc {
     position: fixed;
     top: 10%;
     left: 0;
-    width: 300px;
+    width: 270px;
     max-height: 80%;
     overflow-y: auto;
     background: rgba(255, 255, 255, 0.7);
-    /* Semi-transparent background */
     backdrop-filter: blur(15px);
-    /* Blur effect behind the TOC */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 1.5rem;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: translateX(-110%);
-    /* Hidden by default */
     opacity: 0;
-    /* Hidden by default */
     z-index: 999;
 }
 
-/* Visible state for TOC */
 #toc.visible {
     transform: translateX(0);
-    /* Slide in from the left */
     opacity: 1;
-    /* Fully visible */
 }
 
-/* TOC heading */
 #toc h2 {
     font-family: 'Arial', sans-serif;
     font-size: 1.8rem;
     color: #333;
     margin-bottom: 1rem;
     text-align: center;
-    border-bottom: 2px solid #007BFF;
+
     padding-bottom: 0.5rem;
 }
 
-/* TOC list styles */
 #toc ul {
     list-style: none;
     padding: 0;
@@ -226,18 +217,15 @@ input:checked+.slider:before {
 
 #toc a:hover {
     background-color: rgba(0, 123, 255, 0.15);
-    /* Slightly darker hover background */
     color: #0056b3;
     transform: translateX(5px);
 }
 
-/* Toggle button styles */
 #toggleTocBtn {
     position: fixed;
     top: 10%;
     left: 10px;
     z-index: 1000;
-    background-color: #007BFF;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -252,4 +240,29 @@ input:checked+.slider:before {
 #toggleTocBtn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
+}
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.icon.sun {
+    right: 10px;
+    opacity: 1;
+}
+
+.icon.moon {
+    left: 10px;
+    opacity: 0;
+}
+
+body.dark-mode .icon.sun {
+    opacity: 0;
+}
+
+body.dark-mode .icon.moon {
+    opacity: 100;
 }

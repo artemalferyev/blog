@@ -16,11 +16,11 @@
     </span>
 </label>
     <header>
-        <h1>Artem's Blog: Thoughts about Things and my Path</h1>
+    <h1>Artem's Blog: Thoughts about Things and Sometimes about my Path</h1>
     </header>
     <button id="toggleTocBtn">☰</button>
     <nav id="toc" class="hidden"></nav>
-    <h1>Chapter I: Waking Up in the Field of Technology</h1>
+    <h2>Chapter I: Waking Up in the Field of Technology</h2>
     <section>
         <article>
         <header>
@@ -97,7 +97,7 @@
             invaluable when entering the workforce. It allows you to gain real-world skills, collaborate on projects, and build
             a portfolio that showcases your abilities to prospective employers.</p>
                     
-        <h4>Conclusion</h4>
+        <h4>Building a Strong Foundation for IT Success</h4>
 
         <p> In the IT industry, dismissing the importance of math and a university degree can be a grave mistake. While some IT
             professionals have succeeded without these qualifications, they often represent the exceptions rather than the rule.
@@ -174,7 +174,7 @@
         </ul>
         <p></p>
 
-        <h4>Conclusion</h4>
+        <h4>The Future of Technology and Ethics</h4>
 
         <p> The very idea of robots protesting alongside humans for their rights sounds like a plot straight out of a sci-fi
             novel. Yet, the rapid pace of technological evolution suggests we should be prepared for a wide range of
@@ -233,7 +233,7 @@
             It’s up to developers, policymakers, and consumers to ensure that the lines between right and wrong aren’t blurred
             by the allure.</p>
                 
-        <h4>Conclusion</h4>
+        <h4>Embracing the Balance</h4>
                 
         <p> The romanticization of robots and AI is an exciting avenue of cultural exploration, reflecting our hopes, fears, and
             aspirations. While it’s enjoyable to dream about a world where robots are our friends, confidants, or saviors, we
@@ -244,7 +244,7 @@
 
         </article>
         </section>
-        <h1>Chapter II: Becoming the Professional</h1>
+        <h2>Chapter II: Becoming the Professional</h2>
             <section>
             <article>
             <header>
@@ -396,7 +396,7 @@
         <footer>
         <script>
             // Dark Mode Toggle
-    document.getElementById('darkModeToggle').addEventListener('change', function () {
+            document.getElementById('darkModeToggle').addEventListener('change', function () {
         if (this.checked) {
             document.body.classList.add('dark-mode');
         } else {
@@ -404,34 +404,41 @@
         }
     });
         // Table of Contents
-                const tocContainer = document.getElementById('toc');
-                const toggleTocBtn = document.getElementById('toggleTocBtn');
+    document.addEventListener('DOMContentLoaded', () => {
+        const tocContainer = document.getElementById('toc');
+        const toggleTocBtn = document.getElementById('toggleTocBtn');
 
-                const tocHeading = document.createElement('h2');
-                tocContainer.appendChild(tocHeading);
+        const tocList = document.createElement('ul');
+        const headings = document.querySelectorAll('h2, h3');
 
-                const tocList = document.createElement('ul');
+        headings.forEach((heading, index) => {
+            const listItem = document.createElement('li');
 
-                const headings = document.querySelectorAll('h3');
-                headings.forEach((heading, index) => {
-                    if (!heading.id) {
-                        heading.id = `heading-${index}`;
-                    }
+            if (heading.tagName.toLowerCase() === 'h2') {
+                listItem.textContent = heading.textContent;
+                listItem.classList.add('toc-h2');
+                listItem.style.fontWeight = 'bold';
+                listItem.style.marginTop = '1rem';
+            } else {
+                if (!heading.id) {
+                    heading.id = `heading-${index}`;
+                }
+                const link = document.createElement('a');
+                link.href = `#${heading.id}`;
+                link.textContent = heading.textContent;
 
-                    const listItem = document.createElement('li');
-                    const link = document.createElement('a');
-                    link.href = `#${heading.id}`;
-                    link.textContent = heading.textContent;
+                listItem.appendChild(link);
+            }
 
-                    listItem.appendChild(link);
-                    tocList.appendChild(listItem);
-                });
+            tocList.appendChild(listItem);
+        });
 
-                tocContainer.appendChild(tocList);
+        tocContainer.appendChild(tocList);
 
-                toggleTocBtn.addEventListener('click', () => {
-                    tocContainer.classList.toggle('visible');
-                });
+        toggleTocBtn.addEventListener('click', () => {
+            tocContainer.classList.toggle('visible');
+        });
+    });
     </script>
     </footer>
 </body>

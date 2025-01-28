@@ -154,7 +154,7 @@ body.dark-mode a:hover {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: #444;
 }
 
 input:checked+.slider:before {
@@ -208,7 +208,7 @@ input:checked+.slider:before {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: #007BFF;
+    color: #000000;
     padding: 0.5rem 0.75rem;
     display: block;
     border-radius: 8px;
@@ -224,7 +224,7 @@ input:checked+.slider:before {
 #toggleTocBtn {
     position: fixed;
     top: 10%;
-    left: 10px;
+    left: 110px;
     z-index: 1000;
     color: white;
     border: none;
@@ -238,7 +238,7 @@ input:checked+.slider:before {
 }
 
 #toggleTocBtn:hover {
-    background-color: #0056b3;
+    background-color: #555;
     transform: scale(1.05);
 }
 .icon {
@@ -265,4 +265,7 @@ body.dark-mode .icon.sun {
 
 body.dark-mode .icon.moon {
     opacity: 100;
+}
+body.dark-mode #toc li.toc-h2 {
+    color: #000;
 }

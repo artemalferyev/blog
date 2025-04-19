@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -272,13 +271,10 @@ body.dark-mode #toc li.toc-h2 {
 /* CSS */
 #toggleTocBtn {
     position: fixed;
-    /* Keeps it in place */
     top: 1rem;
-    /* Spacing from top */
     left: 1rem;
-    /* Spacing from left */
     z-index: 1000;
-    /* Ensure it stays above other stuff */
+    
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
     background-color: #fff;
@@ -288,10 +284,10 @@ body.dark-mode #toc li.toc-h2 {
     cursor: pointer;
 }
 
-/* Optional: Adjustments for smaller screens */
 @media (max-width: 600px) {
     #toggleTocBtn {
         font-size: 1.2rem;
         padding: 0.4rem 0.8rem;
+        display: block;
     }
 }

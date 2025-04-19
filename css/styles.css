@@ -293,8 +293,8 @@ body.dark-mode #toc li.toc-h2 {
 }
 @media (max-width: 768px) {
     #toggleTocBtn {
-        left: auto;
-        right: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
         top: 1rem;
     }
 }

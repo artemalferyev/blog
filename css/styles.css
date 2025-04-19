@@ -104,6 +104,8 @@ body.dark-mode a:hover {
 @media (max-width: 768px) {
     body {
         padding: 10px;
+        max-width: 100%;
+        margin: 0;
     }
 
     header h1 {
@@ -222,8 +224,8 @@ input:checked+.slider:before {
 
 #toggleTocBtn {
     position: fixed;
-    top: 10%;
-    left: 110px;
+    top: 50%;
+    left: 0.5rem;
     z-index: 1000;
     color: white;
     border: none;
@@ -293,10 +295,8 @@ body.dark-mode #toc li.toc-h2 {
 }
 @media (max-width: 768px) {
     #toggleTocBtn {
-        left: -0.5rem;
-        right: auto;
-        transform: none;
-        top: 50%;
+        left: 0.5rem;
         transform: translateY(-50%);
+        top: 50%;
     }
 }

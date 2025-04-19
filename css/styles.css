@@ -293,7 +293,7 @@ body.dark-mode #toc li.toc-h2 {
 }
 @media (max-width: 768px) {
     #toggleTocBtn {
-        left: 1rem;
+        left: -0.5rem;
         right: auto;
         transform: none;
         top: 50%;

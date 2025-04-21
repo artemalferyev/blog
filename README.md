@@ -16,10 +16,15 @@ This is a minimal, responsive blog built using only HTML and CSS. The goal of th
 ## Project Structure
 
 /blog
+
 ├── css/
+
 │   └── styles.css      # Main stylesheet
+
 ├── index.html          # Homepage with blog articles
+
 ├── README.md           # Project documentation
+
 └── LICENSE             # MIT License
 
 ## How to Use

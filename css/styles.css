@@ -225,23 +225,25 @@ input:checked+.slider:before {
 #toggleTocBtn {
     position: fixed;
     top: 50%;
-    left: 0.5rem;
+    left: -12px;
+    transform: translateY(-50%);
     z-index: 1000;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
+
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    transition: left 0.3s ease, background-color 0.3s ease;
 }
 
 #toggleTocBtn:hover {
-    background-color: #555;
-    transform: scale(1.05);
+    left: 0;
+    background-color: #f0f0f0;
 }
+
 .icon {
     position: absolute;
     top: 50%;
@@ -270,21 +272,6 @@ body.dark-mode .icon.moon {
 body.dark-mode #toc li.toc-h2 {
     color: #000;
 }
-/* CSS */
-#toggleTocBtn {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1000;
-    
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
 
 @media (max-width: 600px) {
     #toggleTocBtn {
@@ -293,6 +280,7 @@ body.dark-mode #toc li.toc-h2 {
         display: block;
     }
 }
+
 @media (max-width: 768px) {
     #toggleTocBtn {
         left: 0.5rem;

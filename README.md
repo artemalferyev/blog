@@ -21,11 +21,11 @@ This is a minimal, responsive blog built using only HTML and CSS. The goal of th
 
    └── styles.css      # Main stylesheet
 
-├── index.html          # Homepage with blog articles
+└── LICENSE             # MIT License
 
 ├── README.md           # Project documentation
 
-└── LICENSE             # MIT License
+├── index.html          # Homepage with blog articles
 
 ## How to Use
 

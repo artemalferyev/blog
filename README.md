@@ -46,7 +46,7 @@ This is a minimal, responsive blog built using only HTML and CSS. The goal of th
 
 - HTML5
 - CSS3
-- JavaScript
+- vanilla JS
 
 ## License
 

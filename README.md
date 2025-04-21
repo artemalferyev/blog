@@ -19,7 +19,7 @@ This is a minimal, responsive blog built using only HTML and CSS. The goal of th
 
 ├── css/
 
-│   └── styles.css      # Main stylesheet
+   └── styles.css      # Main stylesheet
 
 ├── index.html          # Homepage with blog articles
 
